@@ -1,0 +1,32 @@
+<ion-content>
+  <ion-row style="padding: 0px 17px 0px 17px;">
+    <ion-col style="text-align: center;" size="12">
+      <img style="max-height: 270px;margin-bottom: -50px;" src="assets/logos/logo.png" alt="">
+    </ion-col>
+    <ion-col size="12">
+      <p class="session">Iniciar Sesión</p>
+      <p style="color:#898989">¡Hola! Te espera un gran día</p>
+    </ion-col>
+    <ion-col size="12">
+      <ion-item class="ion-no-padding">
+        <ion-label class="label" position="stacked">Email</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+    
+      <ion-item class="ion-no-padding">
+        <ion-label class="label" position="stacked">Contraseña</ion-label>
+        <ion-input class="my-menu" [type]="seePasword?'text':'password'" id="myInput"></ion-input>
+        <ion-icon slot="end" class="ion-align-self-end" (click)="seePasword = !seePasword" *ngIf="!seePasword" name="eye-outline"></ion-icon>
+        <ion-icon slot="end" class="ion-align-self-end" (click)="seePasword = !seePasword" *ngIf="seePasword"  name="eye-off-outline"></ion-icon>
+      </ion-item>
+    </ion-col>
+    <ion-col style="text-align: center;" size="12">
+      <ion-button class="button">
+        Entrar
+      </ion-button>
+    </ion-col>
+    <ion-col size="12">
+      <p style="color:#898989;text-decoration: underline;">¿Olvidaste tu contraseña?</p>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -6,13 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Retiros', url: '/folder/Inbox', icon: 'store-alt' },
+    { title: 'Entregas', url: '/folder/Outbox', icon: 'truck' },
+    { title: 'Informes', url: '/folder/Favorites', icon: 'chart-bar' },
+    { title: 'Mensajes', url: '/folder/Archived', icon: 'envelope' },
+    { title: 'Configuración', url: '/folder/Archived', icon: 'cog' ,cog:true},
+
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
 }
