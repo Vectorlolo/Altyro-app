@@ -4,18 +4,18 @@
       <ion-content>
         <ion-list id="inbox-list">
           <div style="text-align: center;margin-bottom: 75px;margin-top: 25px;">
-            <ion-avatar style="margin-right: auto;margin-left: auto;" slot="start">
-              <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+            <ion-avatar  style="margin-right: auto;margin-left: auto;width: 70px;height: 70px;" slot="start">
+              <img src="assets/images/chris.jpg">
             </ion-avatar>
-            <p style="font-size: 17px;font-weight: bold;">Usuario Apellido</p>
-            <ion-note>USER@USER.com</ion-note>
+            <p style="font-size: 17px;font-weight: bold;">Christina Aguilera</p>
+            <ion-note>Christina@gmail.com</ion-note>
           </div>
   
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item [ngClass]="p.cog?'cog':''" class="item" style="margin-bottom: 10px;" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+            <ion-item  [ngClass]="p.cog?'cog':''" class="item" style="margin-bottom: 10px;" routerDirection="root" [routerLink]="p.url" lines="none" detail="false" routerLinkActive="selected">
               <fa-icon style="color: #d1dae3;" [icon]="p.icon"></fa-icon>
-              <ion-label style="margin-left: 20px;">{{ p.title }}</ion-label>
+              <ion-label style="margin-left: 20px;font-size: 17px;font-weight: bold;">{{ p.title }}</ion-label>
               <ion-icon name="chevron-forward-outline"></ion-icon>
             </ion-item>
           </ion-menu-toggle>

@@ -8,11 +8,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Retiros', url: '/folder/Inbox', icon: 'store-alt' },
-    { title: 'Entregas', url: '/folder/Outbox', icon: 'truck' },
-    { title: 'Informes', url: '/folder/Favorites', icon: 'chart-bar' },
-    { title: 'Mensajes', url: '/folder/Archived', icon: 'envelope' },
-    { title: 'Configuración', url: '/folder/Archived', icon: 'cog' ,cog:true},
+    { title: 'Retiros', url: '/retiro', icon: 'store-alt' },
+    { title: 'Entregas', url: '/folder/Entregas', icon: 'truck' },
+    { title: 'Informes', url: '/folder/Informes', icon: 'chart-bar' },
+    { title: 'Mensajes', url: '/folder/Mensajes', icon: 'envelope' },
+    { title: 'Configuración', url: '/folder/Configuración', icon: 'cog' ,cog:true},
 
   ];
   constructor() {}
