@@ -12,8 +12,9 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { RetirosComponent } from './retiros/retiros.component';
+import { RetiroComponent } from './retiros/retiro/retiro.component';
 @NgModule({
-  declarations: [AppComponent,LoginComponent,RetirosComponent],
+  declarations: [AppComponent,LoginComponent,RetirosComponent,RetiroComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FontAwesomeModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
