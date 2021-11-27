@@ -1,2 +1,2 @@
-rm /var/www/html/apprepartidores
-cp www /var/www/html/apprepartidores
+rm -rf /var/www/html/apprepartidores
+cp -r www /var/www/html/apprepartidores
