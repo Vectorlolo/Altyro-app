@@ -13,7 +13,6 @@ const routes: Routes = [
     // component:NotFoundComponent
     loadChildren: () => import('./not-found/not-found.module').then( m => m.NotFoundPageModule)
   },
-  
   {
     path: 'example',
     redirectTo: 'folder/Inbox',
@@ -27,9 +26,15 @@ const routes: Routes = [
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
-  
+  {
+    path: 'informes',
+    loadChildren: () => import('./informes/informes.module').then( m => m.InformesPageModule)
+  },  {
+    path: 'entregas',
+    loadChildren: () => import('./entregas/entregas.module').then( m => m.EntregasPageModule)
+  },
 
-  
+
 ];
 
 @NgModule({

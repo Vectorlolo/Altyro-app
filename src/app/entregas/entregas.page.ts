@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+/* eslint-disable @typescript-eslint/naming-convention */
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-retiros',
-  templateUrl: './retiros.component.html',
-  styleUrls: ['./retiros.component.scss'],
+  selector: 'app-entregas',
+  templateUrl: './entregas.page.html',
+  styleUrls: ['./entregas.page.scss'],
 })
-export class RetirosComponent implements OnInit {
+export class EntregasPage implements OnInit {
   retiros = [
     {
       title:'SPACCIO TERRANOVA',
@@ -88,9 +89,9 @@ export class RetirosComponent implements OnInit {
       regiones:5
     },
   ];
-
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit(): void {
+  }
 
 }
