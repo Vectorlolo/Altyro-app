@@ -13,7 +13,7 @@
   - variables.scss 
     @media (prefers-color-scheme: light) 
 
-### Componente Informes
+### Componente Informes:
 
   - [x] Punto final añadido en el texto del login "te espera un gran día"
   - [x] Texto de Asignados agregado.
@@ -28,7 +28,7 @@
 
 
 
-### Shortcuts y otras informaciones utiles
+### Shortcuts y otras informaciones utiles:
 
 - Git Bash:
   * "code ." Abre visual studio desde la Git Bash.
