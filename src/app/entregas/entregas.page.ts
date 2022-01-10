@@ -7,86 +7,51 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./entregas.page.scss'],
 })
 export class EntregasPage implements OnInit {
-  retiros = [
+  entregas = [
     {
-      title:'SPACCIO TERRANOVA',
-      encargado:'Daniela Terranova',
+      title:'ANDREA BEAUTY LASH',
+      subtitle:'Carolina Flores',
       direccion:'EL UNIVERSO 7486, CERRILLOS',
       depto:'TORRE A',
-      telefono:'951111555554',
-      telefonoSecndario:'951111555554',
-      santiago:25,
-      regiones:5
+      telefono:'95115554',
+      tipopaquete:'ESTANDAR',
+      tiposervicio:'CAMBIO',
     },
     {
       title:'BLOOM TO GIVE',
-      encargado:'Daniela Terranova',
+      subtitle:'Rocio Arana',
       direccion:'EL UNIVERSO 7486, CERRILLOS',
       depto:'TORRE A',
-      telefono:'951111555554',
-      telefonoSecndario:'951111555554',
-      santiago:25,
-      regiones:5
+      telefono:'95115554',
+      tipopaquete:'ESTANDAR',
+      tiposervicio:'CAMBIO',
     },
     {
-      title:'STORE MQ DUCK',
-      encargado:'Daniela Terranova',
+      title:'CLARA STORE',
+      subtitle:'Felipe Soto',
       direccion:'EL UNIVERSO 7486, CERRILLOS',
       depto:'TORRE A',
-      telefono:'951111555554',
-      telefonoSecndario:'951111555554',
-      santiago:25,
-      regiones:5
+      telefono:'95115554',
+      tipopaquete:'ESTANDAR',
+      tiposervicio:'CAMBIO',
     },
     {
       title:'MENGUANTE',
-      encargado:'Daniela Terranova',
+      subtitle:'Sofía Velez',
       direccion:'EL UNIVERSO 7486, CERRILLOS',
       depto:'TORRE A',
-      telefono:'951111555554',
-      telefonoSecndario:'951111555554',
-      santiago:25,
-      regiones:5
+      telefono:'95115554',
+      tipopaquete:'ESTANDAR',
+      tiposervicio:'CAMBIO',
     },
     {
-      title:'TIENDA AURORA',
-      encargado:'Daniela Terranova',
+      title:'ZOLDYCK CLOTHES',
+      subtitle:'Ana María López',
       direccion:'EL UNIVERSO 7486, CERRILLOS',
       depto:'TORRE A',
-      telefono:'951111555554',
-      telefonoSecndario:'951111555554',
-      santiago:25,
-      regiones:5
-    },
-    {
-      title:'GRESHA STYLE',
-      encargado:'Daniela Terranova',
-      direccion:'EL UNIVERSO 7486, CERRILLOS',
-      depto:'TORRE A',
-      telefono:'951111555554',
-      telefonoSecndario:'951111555554',
-      santiago:25,
-      regiones:5
-    },
-    {
-      title:'NATURELL CHILE',
-      encargado:'Daniela Terranova',
-      direccion:'EL UNIVERSO 7486, CERRILLOS',
-      depto:'TORRE A',
-      telefono:'951111555554',
-      telefonoSecndario:'951111555554',
-      santiago:25,
-      regiones:5
-    },
-    {
-      title:'MY CUTR PUSSY',
-      encargado:'Daniela Terranova',
-      direccion:'EL UNIVERSO 7486, CERRILLOS',
-      depto:'TORRE A',
-      telefono:'951111555554',
-      telefonoSecndario:'951111555554',
-      santiago:25,
-      regiones:5
+      telefono:'95115554',
+      tipopaquete:'ESTANDAR',
+      tiposervicio:'CAMBIO',
     },
   ];
   constructor() { }

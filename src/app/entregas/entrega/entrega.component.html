@@ -1,0 +1,28 @@
+<div class="card">
+  <p class="title">
+    {{entrega.title}}
+    <br>
+    <span>{{entrega.subtitle}}</span>
+  </p>
+  <ion-button class="buttonRowDown" style="margin-left: auto;" (click)="show = !show" >
+    <ion-icon class="iconRowDown" *ngIf="!show" name="caret-down-outline"></ion-icon>
+    <ion-icon class="iconRowDown" *ngIf="show" name="caret-up-outline"></ion-icon>
+  </ion-button>
+</div>
+<div class="show" *ngIf="show">
+  
+  <p>DIRECCIÓN: {{entrega.direccion}}</p>
+  <p>DEPTO/TORRE: {{entrega.depto}}</p>
+  <p>TÉLEFONO: {{entrega.telefono}}</p>
+  <p>TIPO DE PAQUETE: {{entrega.tipopaquete}}</p>
+  <p>TIPO DE SERVICIO: {{entrega.tiposervicio}}</p>
+
+  <div style="display: flex; text-align: center;">
+    <button mat-raised-button (click) ="openDialog()" style="background: red;" class="buttonRet" >
+      NO ENTREGADO
+    </button>
+    <ion-button style="--background: green;" class="buttonRetirado">
+      ENTREGADO
+    </ion-button>
+  </div>
+</div>
