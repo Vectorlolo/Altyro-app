@@ -14,7 +14,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { RetirosComponent } from './retiros/retiros.component';
 import { RetiroComponent } from './retiros/retiro/retiro.component';
 import { EntregaComponent } from './entregas/entrega/entrega.component';
-import { ModalNoEntregadoComponent } from './entregas/entrega/modal-no-entregado/modal-no-entregado.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,8 +23,7 @@ import { ModalNoEntregadoComponent } from './entregas/entrega/modal-no-entregado
     RetirosComponent,
     RetiroComponent
   ],
-  entryComponents: [ModalNoEntregadoComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FontAwesomeModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FontAwesomeModule, BrowserAnimationsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

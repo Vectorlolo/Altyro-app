@@ -119,6 +119,29 @@
   3. Para poder abrir el dialog, se necesita el servicio de dialog MATT, asi que se debe
    importar en el ts, despues de importarlo, se tiene que inyectar en el constructor 
 
+## Comando para hacer commit
+   Bash tab
+   co tab
+   enter
 
+
+
+## Como anadir Angular Material
+- En la terminal, ejecutar el siguiente comando:
+ng add @angular/material y se comienza a descargar el paquete 
+
+Despues de instalar pregunta el tema o plantilla que desea utilizar
+Pregunta si desea instalar Hammer JS (yes)
+Si desea importa el modulo de animaciones (yes)
+
+Luego, al revisar en el app.module.ts, se observa que importo el browserAnimationModule, etc. 
+
+Lo correcto seria trabajar en un nuevo modulo, por lo que se crea uno nuevo con el comando: ng generate module (nombre del modulo) + --flat para que lo cree directamente sin ninguna carpeta.
+
+instalacion: ejecutar angular cli: npm i -g @angular/cli
+luego ejecutar: ng add @angular/material
+
+row: para las filas
+col: para las columnas
 
 ![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)

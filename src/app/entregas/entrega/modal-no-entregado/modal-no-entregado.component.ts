@@ -7,7 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ModalNoEntregadoComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
+
   ngOnInit() {}
 
 }

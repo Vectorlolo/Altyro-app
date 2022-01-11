@@ -22,7 +22,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     EntregasPage,
     EntregaComponent,
     ModalNoEntregadoComponent,
-    
-  ]
+  ],
+  entryComponents: [ModalNoEntregadoComponent],
 })
 export class EntregasPageModule {}
