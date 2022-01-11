@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ModalEntregadoComponent } from './modal-entregado/modal-entregado.component';
 import { ModalNoEntregadoComponent } from './modal-no-entregado/modal-no-entregado.component';
 
 @Component({
@@ -15,6 +16,9 @@ export class EntregaComponent implements OnInit {
 
   openDialog() {
     this.dialog.open(ModalNoEntregadoComponent);
+  }
+  openModal() {
+    this.dialog.open(ModalEntregadoComponent);
   }
 
   ngOnInit() {}

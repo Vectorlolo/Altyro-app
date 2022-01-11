@@ -1,36 +1,5 @@
 <h1 style="font-weight: bold; font-size: 15px; text-align: center;" >ENTREGADO A:</h1>
-<!-- <ion-row>
-    <ion-col size="12" >
-      <ion-item>
-        <ion-label>Titular</ion-label>
-        <ion-checkbox color="primary"checked slot="start" ></ion-checkbox>
-      </ion-item>
 
-    </ion-col>
-  </ion-row>
-      <ion-item>
-       <ion-label>Familiar</ion-label>
-       <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
-      </ion-item>
-
-
-      <ion-item>
-        <ion-label>Vecino (a)</ion-label>
-        <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
-     </ion-item>
-
-      <ion-item>
-        <ion-label>Conserjeria</ion-label>
-        <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
-      </ion-item>
-
-      <ion-item>
-         <ion-label>Otro</ion-label>
-        <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
-      </ion-item>
-
-
-     -->
      <ion-grid>
       <ion-row>
         <ion-col>
@@ -64,8 +33,24 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-      
 
-    <ion-searchbar  [showCancelButton]="miStringDeCancell" (ionInput)="onInput($event)"
-    (ionCancel)="onCancel($event)">
-  </ion-searchbar>
+    <ion-icon  name="camera-outline"></ion-icon>
+
+    <ion-item>
+      <ion-label position="floating">Nombre del Receptor</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Observación</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+
+    <ion-row >
+      <ion-col size="12">
+        <ion-button class="button2">
+          GUARDAR 
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    

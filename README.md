@@ -144,4 +144,11 @@ luego ejecutar: ng add @angular/material
 row: para las filas
 col: para las columnas
 
+
+text area
+
+Para crear una modal, se debe crear una carpeta con su html, ts, y css, y el nombre que se le desea colocar a la carpeta: "modal" en mi caso
+copiar el ts que deberia tener el archivo modal.component.ts
+
+
 ![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)

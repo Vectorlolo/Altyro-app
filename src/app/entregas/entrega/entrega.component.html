@@ -18,11 +18,12 @@
   <p>TIPO DE SERVICIO: {{entrega.tiposervicio}}</p>
 
   <div style="display: flex; text-align: center;">
-    <button mat-raised-button (click) ="openDialog()" style="background: red;" class="buttonRet" >
+    <button mat-raised-button (click) ="openModal()"  style="background: red;" class="buttonRet" >
       NO ENTREGADO
     </button>
-    <ion-button style="--background: green;" class="buttonRetirado">
-      ENTREGADO
-    </ion-button>
+    <button mat-raised-button (click) ="openDialog()" style="background: green;" class="buttonRet" >
+     ENTREGADO
+    </button>
+ 
   </div>
 </div>
