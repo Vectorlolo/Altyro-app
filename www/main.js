@@ -66,6 +66,14 @@ const routes = [
         path: 'folder/:id',
         loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_folder_folder_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./folder/folder.module */ 5098)).then(m => m.FolderPageModule)
     },
+    {
+        path: 'informes',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_informes_informes_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./informes/informes.module */ 8756)).then(m => m.InformesPageModule)
+    },
+    {
+        path: 'entregas',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_entregas_entregas_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./entregas/entregas.module */ 522)).then(m => m.EntregasPageModule)
+    },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -105,8 +113,8 @@ let AppComponent = class AppComponent {
     constructor() {
         this.appPages = [
             { title: 'Retiros', url: '/retiro', icon: 'store-alt' },
-            { title: 'Entregas', url: '/folder/Entregas', icon: 'truck' },
-            { title: 'Informes', url: '/folder/Informes', icon: 'chart-bar' },
+            { title: 'Entregas', url: 'entregas', icon: 'truck' },
+            { title: 'Informes', url: '/informes', icon: 'chart-bar' },
             { title: 'Mensajes', url: '/folder/Mensajes', icon: 'envelope' },
             { title: 'Configuración', url: '/folder/Configuración', icon: 'cog', cog: true },
         ];
@@ -139,7 +147,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! tslib */ 1855);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/core */ 2741);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/platform-browser */ 3220);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/router */ 9535);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/router */ 9535);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ionic/angular */ 4595);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.component */ 721);
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app-routing.module */ 809);
@@ -150,6 +158,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/free-brands-svg-icons */ 4139);
 /* harmony import */ var _retiros_retiros_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./retiros/retiros.component */ 9134);
 /* harmony import */ var _retiros_retiro_retiro_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./retiros/retiro/retiro.component */ 5213);
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/platform-browser/animations */ 8366);
+
 
 
 
@@ -174,10 +184,14 @@ AppModule.ctorParameters = () => [
 ];
 AppModule = (0,tslib__WEBPACK_IMPORTED_MODULE_9__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_10__.NgModule)({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent, _login_login_component__WEBPACK_IMPORTED_MODULE_2__.LoginComponent, _retiros_retiros_component__WEBPACK_IMPORTED_MODULE_3__.RetirosComponent, _retiros_retiro_retiro_component__WEBPACK_IMPORTED_MODULE_4__.RetiroComponent],
-        entryComponents: [],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_11__.BrowserModule, _ionic_angular__WEBPACK_IMPORTED_MODULE_12__.IonicModule.forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_1__.AppRoutingModule, _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_8__.FontAwesomeModule],
-        providers: [{ provide: _angular_router__WEBPACK_IMPORTED_MODULE_13__.RouteReuseStrategy, useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_12__.IonicRouteStrategy }],
+        declarations: [
+            _app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent,
+            _login_login_component__WEBPACK_IMPORTED_MODULE_2__.LoginComponent,
+            _retiros_retiros_component__WEBPACK_IMPORTED_MODULE_3__.RetirosComponent,
+            _retiros_retiro_retiro_component__WEBPACK_IMPORTED_MODULE_4__.RetiroComponent
+        ],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_11__.BrowserModule, _ionic_angular__WEBPACK_IMPORTED_MODULE_12__.IonicModule.forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_1__.AppRoutingModule, _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_8__.FontAwesomeModule, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__.BrowserAnimationsModule],
+        providers: [{ provide: _angular_router__WEBPACK_IMPORTED_MODULE_14__.RouteReuseStrategy, useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_12__.IonicRouteStrategy }],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent],
     })
 ], AppModule);
@@ -255,7 +269,7 @@ RetiroComponent.propDecorators = {
 };
 RetiroComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.Component)({
-        selector: 'retiro',
+        selector: 'app-retiro',
         template: _raw_loader_retiro_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
         styles: [_retiro_component_scss__WEBPACK_IMPORTED_MODULE_1__.default]
     })
@@ -288,82 +302,82 @@ let RetirosComponent = class RetirosComponent {
     constructor() {
         this.retiros = [
             {
-                title: "SPACCIO TERRANOVA",
-                encargado: "Daniela Terranova",
-                direccion: "El universo 7486, CERRILLOS",
-                depto: "Torre A",
-                telefono: "951111555554",
-                telefonoSecndario: "951111555554",
+                title: 'SPACCIO TERRANOVA',
+                encargado: 'Daniela Terranova',
+                direccion: 'EL UNIVERSO 7486, CERRILLOS',
+                depto: 'TORRE A',
+                telefono: '951111555554',
+                telefonoSecndario: '951111555554',
                 santiago: 25,
                 regiones: 5
             },
             {
-                title: "BLOOM TO GIVE",
-                encargado: "Daniela Terranova",
-                direccion: "El universo 7486, CERRILLOS",
-                depto: "Torre A",
-                telefono: "951111555554",
-                telefonoSecndario: "951111555554",
+                title: 'BLOOM TO GIVE',
+                encargado: 'Daniela Terranova',
+                direccion: 'EL UNIVERSO 7486, CERRILLOS',
+                depto: 'TORRE A',
+                telefono: '951111555554',
+                telefonoSecndario: '951111555554',
                 santiago: 25,
                 regiones: 5
             },
             {
-                title: "STORE MQ DUCK",
-                encargado: "Daniela Terranova",
-                direccion: "El universo 7486, CERRILLOS",
-                depto: "Torre A",
-                telefono: "951111555554",
-                telefonoSecndario: "951111555554",
+                title: 'STORE MQ DUCK',
+                encargado: 'Daniela Terranova',
+                direccion: 'EL UNIVERSO 7486, CERRILLOS',
+                depto: 'TORRE A',
+                telefono: '951111555554',
+                telefonoSecndario: '951111555554',
                 santiago: 25,
                 regiones: 5
             },
             {
-                title: "MENGUANTE",
-                encargado: "Daniela Terranova",
-                direccion: "El universo 7486, CERRILLOS",
-                depto: "Torre A",
-                telefono: "951111555554",
-                telefonoSecndario: "951111555554",
+                title: 'MENGUANTE',
+                encargado: 'Daniela Terranova',
+                direccion: 'EL UNIVERSO 7486, CERRILLOS',
+                depto: 'TORRE A',
+                telefono: '951111555554',
+                telefonoSecndario: '951111555554',
                 santiago: 25,
                 regiones: 5
             },
             {
-                title: "TIENDA AURORA",
-                encargado: "Daniela Terranova",
-                direccion: "El universo 7486, CERRILLOS",
-                depto: "Torre A",
-                telefono: "951111555554",
-                telefonoSecndario: "951111555554",
+                title: 'TIENDA AURORA',
+                encargado: 'Daniela Terranova',
+                direccion: 'EL UNIVERSO 7486, CERRILLOS',
+                depto: 'TORRE A',
+                telefono: '951111555554',
+                telefonoSecndario: '951111555554',
                 santiago: 25,
                 regiones: 5
             },
             {
-                title: "GRESHA STYLE",
-                encargado: "Daniela Terranova",
-                direccion: "El universo 7486, CERRILLOS",
-                depto: "Torre A",
-                telefono: "951111555554",
-                telefonoSecndario: "951111555554",
+                title: 'GRESHA STYLE',
+                encargado: 'Daniela Terranova',
+                direccion: 'EL UNIVERSO 7486, CERRILLOS',
+                depto: 'TORRE A',
+                telefono: '951111555554',
+                telefonoSecndario: '951111555554',
                 santiago: 25,
                 regiones: 5
             },
             {
-                title: "NATURELL CHILE",
-                encargado: "Daniela Terranova",
-                direccion: "El universo 7486, CERRILLOS",
-                depto: "Torre A",
-                telefono: "951111555554",
-                telefonoSecndario: "951111555554",
+                title: 'NATURELL CHILE',
+                encargado: 'Daniela Terranova',
+                direccion: 'EL UNIVERSO 7486, CERRILLOS',
+                depto: 'TORRE A',
+                telefono: '951111555554',
+                telefonoSecndario: '951111555554',
                 santiago: 25,
                 regiones: 5
             },
             {
-                title: "MY CUTR PUSSY",
-                encargado: "Daniela Terranova",
-                direccion: "El universo 7486, CERRILLOS",
-                depto: "Torre A",
-                telefono: "951111555554",
-                telefonoSecndario: "951111555554",
+                title: 'MY CUTR PUSSY',
+                encargado: 'Daniela Terranova',
+                direccion: 'EL UNIVERSO 7486, CERRILLOS',
+                depto: 'TORRE A',
+                telefono: '951111555554',
+                telefonoSecndario: '951111555554',
                 santiago: 25,
                 regiones: 5
             },
@@ -714,7 +728,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".card {\n  border-radius: 5px;\n  background: #e6b2f1;\n  padding: 5px;\n  display: flex;\n  margin-bottom: 12px;\n}\n\n.title {\n  font-size: 15px;\n  font-weight: bold;\n}\n\n.buttonRowDown {\n  margin-left: auto;\n  width: 42px;\n  padding: 0px;\n  --background: white;\n  height: 36px;\n}\n\n.iconRowDown {\n  padding: 0px;\n  margin: 0px;\n  color: black;\n  font-size: 44px;\n}\n\n.divBorder {\n  border: solid #9a01cc;\n  padding: 5px;\n  text-align: center;\n  font-weight: bold;\n  text-align: center;\n  margin-bottom: 10px;\n}\n\n.show {\n  font-weight: bold;\n}\n\np {\n  margin: 2px;\n}\n\n.buttonRetirado {\n  margin-left: auto;\n  margin-right: auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJldGlyby5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0VBQ0EsbUJBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0FBQ0o7O0FBRUE7RUFDSSxlQUFBO0VBQ0EsaUJBQUE7QUFDSjs7QUFFQTtFQUNJLGlCQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSxtQkFBQTtFQUNBLFlBQUE7QUFDSjs7QUFFQTtFQUNJLFlBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7QUFDSjs7QUFFQTtFQUNJLHFCQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtFQUNBLG1CQUFBO0FBQ0o7O0FBR0E7RUFDSSxpQkFBQTtBQUFKOztBQUdBO0VBQ0ksV0FBQTtBQUFKOztBQUdBO0VBQ0ksaUJBQUE7RUFDQSxrQkFBQTtBQUFKIiwiZmlsZSI6InJldGlyby5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYXJke1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBiYWNrZ3JvdW5kOiAjZTZiMmYxO1xuICAgIHBhZGRpbmc6IDVweDtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIG1hcmdpbi1ib3R0b206IDEycHg7XG59XG5cbi50aXRsZXtcbiAgICBmb250LXNpemU6IDE1cHg7XG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59XG5cbi5idXR0b25Sb3dEb3due1xuICAgIG1hcmdpbi1sZWZ0OiBhdXRvO1xuICAgIHdpZHRoOiA0MnB4O1xuICAgIHBhZGRpbmc6IDBweDtcbiAgICAtLWJhY2tncm91bmQ6IHdoaXRlO1xuICAgIGhlaWdodDogMzZweDtcbn1cblxuLmljb25Sb3dEb3due1xuICAgIHBhZGRpbmc6IDBweDtcbiAgICBtYXJnaW46IDBweDtcbiAgICBjb2xvcjogYmxhY2s7XG4gICAgZm9udC1zaXplOiA0NHB4O1xufVxuXG4uZGl2Qm9yZGVye1xuICAgIGJvcmRlcjogc29saWQgIzlhMDFjYztcbiAgICBwYWRkaW5nOiA1cHg7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xufVxuXG5cbi5zaG93e1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuXG5we1xuICAgIG1hcmdpbjogMnB4O1xufVxuXG4uYnV0dG9uUmV0aXJhZG97XG4gICAgbWFyZ2luLWxlZnQ6IGF1dG87XG4gICAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xufSJdfQ== */");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".card {\n  border-radius: 5px;\n  background: #e6b2f1;\n  padding: 5px;\n  display: flex;\n  margin-bottom: 21px;\n}\n\n.title {\n  font-size: 15px;\n  font-weight: bold;\n}\n\n.buttonRowDown {\n  margin-left: auto;\n  width: 42px;\n  padding: 0px;\n  --background: white;\n  height: 36px;\n}\n\n.iconRowDown {\n  padding: 0px;\n  margin: 0px;\n  color: black;\n  font-size: 44px;\n}\n\n.divBorder {\n  border: solid #9a01cc;\n  text-align: center;\n  font-weight: bold;\n  text-align: center;\n  margin-bottom: 10px;\n}\n\n.show {\n  font-weight: bold;\n}\n\np {\n  margin: 2px;\n}\n\n.buttonRetirado {\n  margin-left: auto;\n  margin-right: auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJldGlyby5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0VBQ0EsbUJBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0FBQ0o7O0FBRUE7RUFDSSxlQUFBO0VBQ0EsaUJBQUE7QUFDSjs7QUFFQTtFQUNJLGlCQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSxtQkFBQTtFQUNBLFlBQUE7QUFDSjs7QUFFQTtFQUNJLFlBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7QUFDSjs7QUFFQTtFQUNJLHFCQUFBO0VBRUEsa0JBQUE7RUFDQSxpQkFBQTtFQUNBLGtCQUFBO0VBQ0EsbUJBQUE7QUFBSjs7QUFJQTtFQUNJLGlCQUFBO0FBREo7O0FBSUE7RUFDSSxXQUFBO0FBREo7O0FBSUE7RUFDSSxpQkFBQTtFQUNBLGtCQUFBO0FBREoiLCJmaWxlIjoicmV0aXJvLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNhcmR7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIGJhY2tncm91bmQ6ICNlNmIyZjE7XG4gICAgcGFkZGluZzogNXB4O1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgbWFyZ2luLWJvdHRvbTogMjFweDtcbn1cblxuLnRpdGxle1xuICAgIGZvbnQtc2l6ZTogMTVweDtcbiAgICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuLmJ1dHRvblJvd0Rvd257XG4gICAgbWFyZ2luLWxlZnQ6IGF1dG87XG4gICAgd2lkdGg6IDQycHg7XG4gICAgcGFkZGluZzogMHB4O1xuICAgIC0tYmFja2dyb3VuZDogd2hpdGU7XG4gICAgaGVpZ2h0OiAzNnB4O1xufVxuXG4uaWNvblJvd0Rvd257XG4gICAgcGFkZGluZzogMHB4O1xuICAgIG1hcmdpbjogMHB4O1xuICAgIGNvbG9yOiBibGFjaztcbiAgICBmb250LXNpemU6IDQ0cHg7XG59XG5cbi5kaXZCb3JkZXJ7XG4gICAgYm9yZGVyOiBzb2xpZCAjOWEwMWNjO1xuICAgIC8vIHBhZGRpbmc6IDVweDtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbi1ib3R0b206IDEwcHg7XG59XG5cblxuLnNob3d7XG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59XG5cbnB7XG4gICAgbWFyZ2luOiAycHg7XG59XG5cbi5idXR0b25SZXRpcmFkb3tcbiAgICBtYXJnaW4tbGVmdDogYXV0bztcbiAgICBtYXJnaW4tcmlnaHQ6IGF1dG87XG59Il19 */");
 
 /***/ }),
 
@@ -729,7 +743,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".button {\n  width: 250px;\n  --background: #9a01cc;\n  margin-left: auto;\n  margin-right: auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJldGlyb3MuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxZQUFBO0VBQ0EscUJBQUE7RUFDQSxpQkFBQTtFQUNBLGtCQUFBO0FBQ0oiLCJmaWxlIjoicmV0aXJvcy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5idXR0b257XG4gICAgd2lkdGg6IDI1MHB4O1xuICAgIC0tYmFja2dyb3VuZDogIzlhMDFjYztcbiAgICBtYXJnaW4tbGVmdDogYXV0bztcbiAgICBtYXJnaW4tcmlnaHQ6IGF1dG87XG59Il19 */");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".button {\n  width: 250px;\n  --background: #9a01cc;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.button2 {\n  width: 130px;\n  --background: #9a01cc;\n  margin-left: auto;\n  margin-right: auto;\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJldGlyb3MuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxZQUFBO0VBQ0EscUJBQUE7RUFDQSxpQkFBQTtFQUNBLGtCQUFBO0FBQ0o7O0FBRUE7RUFDSSxZQUFBO0VBQ0EscUJBQUE7RUFDQSxpQkFBQTtFQUNBLGtCQUFBO0VBQ0Esa0JBQUE7QUFDSiIsImZpbGUiOiJyZXRpcm9zLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJ1dHRvbntcbiAgICB3aWR0aDogMjUwcHg7XG4gICAgLS1iYWNrZ3JvdW5kOiAjOWEwMWNjO1xuICAgIG1hcmdpbi1sZWZ0OiBhdXRvO1xuICAgIG1hcmdpbi1yaWdodDogYXV0bztcbn1cblxuLmJ1dHRvbjJ7XG4gICAgd2lkdGg6IDEzMHB4O1xuICAgIC0tYmFja2dyb3VuZDogIzlhMDFjYztcbiAgICBtYXJnaW4tbGVmdDogYXV0bztcbiAgICBtYXJnaW4tcmlnaHQ6IGF1dG87XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufSJdfQ== */");
 
 /***/ }),
 
@@ -759,7 +773,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-content>\n  <ion-row style=\"padding: 0px 17px 0px 17px;\">\n    <ion-col style=\"text-align: center;\" size=\"12\">\n      <img style=\"max-height: 270px;margin-bottom: -50px;\" src=\"assets/logos/logo.png\" alt=\"\">\n    </ion-col>\n    <ion-col size=\"12\">\n      <p class=\"session\">Iniciar Sesión</p>\n      <p style=\"color:#898989\">¡Hola! Te espera un gran día</p>\n    </ion-col>\n    <ion-col size=\"12\">\n      <ion-item class=\"ion-no-padding\">\n        <ion-label class=\"label\" position=\"stacked\">Email</ion-label>\n        <ion-input type=\"email\"></ion-input>\n      </ion-item>\n    \n      <ion-item class=\"ion-no-padding\">\n        <ion-label class=\"label\" position=\"stacked\">Contraseña</ion-label>\n        <ion-input class=\"my-menu\" [type]=\"seePasword?'text':'password'\" id=\"myInput\"></ion-input>\n        <ion-icon slot=\"end\" class=\"ion-align-self-end\" (click)=\"seePasword = !seePasword\" *ngIf=\"!seePasword\" name=\"eye-outline\"></ion-icon>\n        <ion-icon slot=\"end\" class=\"ion-align-self-end\" (click)=\"seePasword = !seePasword\" *ngIf=\"seePasword\"  name=\"eye-off-outline\"></ion-icon>\n      </ion-item>\n    </ion-col>\n    <ion-col style=\"text-align: center;\" size=\"12\">\n      <ion-button class=\"button\">\n        Entrar\n      </ion-button>\n    </ion-col>\n    <ion-col size=\"12\">\n      <p style=\"color:#898989;text-decoration: underline;\">¿Olvidaste tu contraseña?</p>\n    </ion-col>\n  </ion-row>\n</ion-content>");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-content>\n  <ion-row style=\"padding: 0px 17px 0px 17px;\">\n    <ion-col style=\"text-align: center;\" size=\"12\">\n      <img style=\"max-height: 270px;margin-bottom: -50px;\" src=\"assets/logos/logo.png\" alt=\"\">\n    </ion-col>\n    <ion-col size=\"12\">\n      <p class=\"session\">Iniciar Sesión</p>\n      <p style=\"color:#898989\">¡Hola! Te espera un gran día.</p>\n    </ion-col>\n    <ion-col size=\"12\">\n      <ion-item class=\"ion-no-padding\">\n        <ion-label class=\"label\" position=\"stacked\">Email</ion-label>\n        <ion-input type=\"email\"></ion-input>\n      </ion-item>\n\n      <ion-item class=\"ion-no-padding\">\n        <ion-label class=\"label\" position=\"stacked\">Contraseña</ion-label>\n        <ion-input class=\"my-menu\" [type]=\"seePasword?'text':'password'\" id=\"myInput\"></ion-input>\n        <ion-icon slot=\"end\" class=\"ion-align-self-end\" (click)=\"seePasword = !seePasword\" *ngIf=\"!seePasword\" name=\"eye-outline\"></ion-icon>\n        <ion-icon slot=\"end\" class=\"ion-align-self-end\" (click)=\"seePasword = !seePasword\" *ngIf=\"seePasword\"  name=\"eye-off-outline\"></ion-icon>\n      </ion-item>\n    </ion-col>\n    <ion-col style=\"text-align: center;\" size=\"12\">\n      <ion-button class=\"button\" routerLink=\"retiro\">\n        Entrar\n      </ion-button>\n    </ion-col>\n    <ion-col size=\"12\">\n      <p style=\"color:#898989;text-decoration: underline;\">¿Olvidaste tu contraseña?</p>\n    </ion-col>\n  </ion-row>\n</ion-content>\n");
 
 /***/ }),
 
@@ -774,7 +788,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div class=\"card\">\n  <p class=\"title\">\n    {{retiro.title}}\n  </p>\n  <ion-button class=\"buttonRowDown\" style=\"margin-left: auto;\" (click)=\"show = !show\" >\n    <ion-icon class=\"iconRowDown\" *ngIf=\"!show\" name=\"caret-down-outline\"></ion-icon>\n    <ion-icon class=\"iconRowDown\" *ngIf=\"show\" name=\"caret-up-outline\"></ion-icon>\n  </ion-button>\n</div>\n<div class=\"show\" *ngIf=\"show\">\n  <p>Encargado:{{retiro.encargado}}</p>\n  <p>Dirección:{{retiro.direccion}}</p>\n  <p>Depto/Torre:{{retiro.depto}}</p>\n  <p>Télefono:{{retiro.telefono}}</p>\n  <p>Télefono Secundario:{{retiro.telefonoSecndario}}</p>\n\n  <div class=\"divBorder\">\n    <p>CANTIDAD DE PAQUETES</p>\n     <ion-row style=\"text-align: center;color: #e6b2f1;\">\n      <ion-col size=\"4\">\n        Santiago <br> {{retiro.santiago}}\n      </ion-col>\n      <ion-col size=\"4\">\n        Regiones <br> {{retiro.regiones}}\n      </ion-col>\n      <ion-col size=\"4\">\n        Total <br> {{retiro.santiago + retiro.regiones}}\n      </ion-col>\n     </ion-row>\n  </div>\n\n  <div style=\"display: flex; text-align: center;\">\n    <ion-button style=\"--background: red;\" class=\"buttonRetirado\">\n      NO RETIRADO\n    </ion-button>\n    <ion-button style=\"--background: green;\" class=\"buttonRetirado\">\n      RETIRADO\n    </ion-button>\n  </div>\n</div>\n\n<!-- \n:\"Daniela Terranova\",\n      direccion:\"El universo 7486, CERRILLOS\",\n      depto:\"Torre A\",\n      telefono:\"951111555554\",\n      telefonoSecndario:\"951111555554\",\n      santiago:25,\n      regiones:5 -->");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div class=\"card\">\n  <p class=\"title\">\n    {{retiro.title}}\n  </p>\n  <ion-button class=\"buttonRowDown\" style=\"margin-left: auto;\" (click)=\"show = !show\" >\n    <ion-icon class=\"iconRowDown\" *ngIf=\"!show\" name=\"caret-down-outline\"></ion-icon>\n    <ion-icon class=\"iconRowDown\" *ngIf=\"show\" name=\"caret-up-outline\"></ion-icon>\n  </ion-button>\n</div>\n<div class=\"show\" *ngIf=\"show\">\n  <p>ENCARGADO: {{retiro.encargado}}</p>\n  <p>DIRECCIÓN: {{retiro.direccion}}</p>\n  <p>DEPTO/TORRE: {{retiro.depto}}</p>\n  <p>TÉLEFONO: {{retiro.telefono}}</p>\n  <p>TÉLEFONO SECUNDARIO: {{retiro.telefonoSecndario}}</p>\n\n  <div class=\"divBorder\">\n    <p>CANTIDAD DE PAQUETES</p>\n     <ion-row style=\"text-align: center;color:#9a01cc;\">\n      <ion-col size=\"4\">\n        SANTIAGO <br> {{retiro.santiago}}\n      </ion-col>\n      <ion-col size=\"4\">\n        REGIONES <br> {{retiro.regiones}}\n      </ion-col>\n      <ion-col size=\"4\">\n        TOTAL <br> {{retiro.santiago + retiro.regiones}}\n      </ion-col>\n     </ion-row>\n  </div>\n\n  <div style=\"display: flex; text-align: center;\">\n    <ion-button style=\"--background: red;\" class=\"buttonRetirado\">\n      NO RETIRADO\n    </ion-button>\n    <ion-button style=\"--background: green;\" class=\"buttonRetirado\">\n      RETIRADO\n    </ion-button>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -789,7 +803,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header style=\"height: 60px;\">\n  <ion-icon onclick=\"history.back()\" style=\"    margin-top: 17px;\n  margin-left: 15px;\n  color: #b111d4;\n  font-size: 27px;\" name=\"arrow-back-outline\"></ion-icon>\n  <!-- <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-buttons slot=\"start\" routerLink=\"/payment\">\n        <ion-icon name=\"chevron-back-outline\" class=\"xdsffdd\"></ion-icon>\n      </ion-buttons>\n    </ion-buttons>\n    \n    <ion-title>About</ion-title>\n  </ion-toolbar> -->\n</ion-header>\n<ion-content>\n  <ion-row style=\"padding: 15px 35px 0px 35px;\"> \n    <ion-col size=\"12\" style=\"text-align: center;\">\n      <ion-button class=\"button\">\n        Retiros asiganados\n      </ion-button> \n    </ion-col>\n\n    <ion-col style=\"margin-top: 25px;\" size=\"12\">\n      <div *ngFor=\"let retiro of retiros\">\n        <retiro [retiro]=\"retiro\"></retiro>\n      </div>\n    </ion-col>\n\n\n  </ion-row>\n</ion-content>");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header \n  style=\"\n    height: 60px; \n    background-color: white;\n  \"\n>\n\n  <ion-icon \n    onclick=\"history.back()\" \n    style=\"\n      margin-top: 17px;\n      margin-left: 15px;\n      color: #b111d4;\n      font-size: 27px;\" \n    name=\"arrow-back-outline\"\n  >\n  </ion-icon>\n  \n</ion-header>\n\n\n<ion-content>\n\n  <ion-row \n    style=\"\n      padding: 15px 35px 0px 35px;\n    \"\n  > \n\n    <ion-col size=\"12\" style=\"text-align: center;\">\n      <ion-button class=\"button\">\n        Retiros asignados\n      </ion-button> \n    </ion-col>\n\n    <ion-col style=\"margin-top: 25px;\" size=\"12\">\n      <div *ngFor=\"let retiro of retiros\">\n        <app-retiro [retiro]=\"retiro\"></app-retiro>\n      </div>\n    </ion-col>\n\n    <ion-button class=\"button2\">\n      Total (15)\n    </ion-button> \n\n  </ion-row>\n</ion-content>");
 
 /***/ })
 
