@@ -1,5 +1,5 @@
 git pull
-if [ '$2' == 'build']
+if [ "$2" == 'build']
 then
   ng build
 fi
