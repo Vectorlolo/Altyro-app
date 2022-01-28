@@ -1,5 +1,8 @@
 git pull
-ng build
+if [$2 == 'build']
+then
+  ng build
+fi
 git add .
 git commit -m "Deploying in server"
 git push
