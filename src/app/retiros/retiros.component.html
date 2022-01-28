@@ -1,38 +1,41 @@
-<ion-header 
+<ion-header
   style="
-    height: 60px; 
-    background-color: white;
+    height: 60px;
   "
 >
 
-  <ion-icon 
-    onclick="history.back()" 
+  <ion-icon
+    onclick="history.back()"
     style="
       margin-top: 17px;
       margin-left: 15px;
       color: #b111d4;
-      font-size: 27px;" 
+      font-size: 27px;"
     name="arrow-back-outline"
   >
   </ion-icon>
-  
+
 </ion-header>
 
 
 <ion-content>
 
-  <ion-row 
+  <ion-row
     style="
       padding: 15px 35px 0px 35px;
     "
-  > 
+  >
 
     <ion-col size="12" style="text-align: center;">
       <ion-button class="button">
         Retiros asignados
-      </ion-button> 
+      </ion-button>
     </ion-col>
 
+    <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="miStringDeCancell" (ionInput)="onInput($event)"
+      placeholder="Buscar.."
+      (ionCancel)="onCancel($event)">
+    </ion-searchbar>
     <ion-col style="margin-top: 25px;" size="12">
       <div *ngFor="let retiro of retiros">
         <app-retiro [retiro]="retiro"></app-retiro>
@@ -41,7 +44,7 @@
 
     <ion-button class="button2">
       Total (15)
-    </ion-button> 
+    </ion-button>
 
   </ion-row>
 </ion-content>

@@ -1,40 +1,59 @@
 <h1 style="font-weight: bold; font-size: 15px; text-align: center;" >ENTREGADO A:</h1>
 
-     <ion-grid>
-      <ion-row>
-        <ion-col>
+<ion-list
+  style="
+    margin-bottom:20px;
+  "
+  >
+  <ion-radio-group >
+    <ion-item >
+      <label >Titular</label>
+      <ion-radio slot="start" value="Titular"></ion-radio>
+    </ion-item>
+    <ion-item >
+      <label >Familiar</label>
+      <ion-radio slot="start" value="Familiar"></ion-radio>
+    </ion-item>
+    <ion-item >
+      <label >Vecino (a)</label>
+      <ion-radio slot="start" value="Vecino"></ion-radio>
+    </ion-item>
+    <ion-item >
+      <label >Conserjeria</label>
+      <ion-radio slot="start" value="Conserjeria"></ion-radio>
+    </ion-item>
+    <ion-item >
+      <label >Otro</label>
+      <ion-radio slot="start" value="Otro"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+</ion-list>
 
-            <input type="checkbox">
-            <span class="checkmark"></span>
-            <label class="container">Titular</label>
-        </ion-col>
-        <ion-col>
-            <input type="checkbox">
-            <span class="checkmark"></span>
-            <label class="container">Familiar</label>
-        </ion-col>
-        <ion-col>
+<div
+  style="
+    margin-bottom: 25px;
+    text-align:center;
+  "
+  >
+  <a
+    style="
+      cursor: pointer;
+      text-decoration: none !important;
+      color:black;
+      text-decoration: underline;
 
-            <input type="checkbox">
-            <span class="checkmark"></span>
-            <label class="container">Vecino (a)</label>
-        </ion-col>
-        <ion-col>
-
-            <input type="checkbox">
-            <span class="checkmark"></span>
-            <label class="container">Conserjeria</label>
-        </ion-col>
-        <ion-col>
-
-            <input type="checkbox">
-            <span class="checkmark"></span>
-            <label class="container">Otro</label>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <div class="text-center">Subir Imagen <ion-icon  name="camera-outline"></ion-icon></div>
+    "
+    >
+    <ion-icon
+      name="camera-outline"
+      style="
+        margin-bottom: -7px;
+        margin-left: 0px !important;
+      "
+    ></ion-icon>
+    Subir Imagen
+  </a>
+</div>
 
     <ion-item>
       <ion-label position="floating">Nombre del Receptor</ion-label>
@@ -46,11 +65,13 @@
       <ion-textarea></ion-textarea>
     </ion-item>
 
-    <ion-row >
-      <ion-col size="12" class="text-center">
-        <ion-button class="button2">
-          GUARDAR
-        </ion-button>
-      </ion-col>
-    </ion-row>
-
+<div
+  style="
+    margin-top:20px;
+    text-align:center;
+  "
+  >
+  <ion-button class="button2">
+    GUARDAR
+  </ion-button>
+</div>

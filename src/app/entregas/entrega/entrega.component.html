@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" >
   <p class="title">
     {{entrega.title}}
     <br>
@@ -9,8 +9,10 @@
     <ion-icon class="iconRowDown" *ngIf="show" name="caret-up-outline"></ion-icon>
   </ion-button>
 </div>
-<div class="show" *ngIf="show">
-  
+<div class="show" *ngIf="show"
+    style="margin-bottom:25px;"
+  >
+
   <p>DIRECCIÓN: {{entrega.direccion}}</p>
   <p>DEPTO/TORRE: {{entrega.depto}}</p>
   <p>TÉLEFONO: {{entrega.telefono}}</p>
@@ -24,6 +26,6 @@
     <button mat-raised-button (click) ="openDialog()" style="background: green;" class="buttonRet" >
      ENTREGADO
     </button>
- 
+
   </div>
 </div>

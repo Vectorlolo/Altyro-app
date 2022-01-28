@@ -1,4 +1,4 @@
-<ion-header style="height: 60px; background-color: white;">
+<ion-header style="height: 60px; ">
   <ion-icon onclick="history.back()" style="    margin-top: 17px;
   margin-left: 15px;
   color: #b111d4;
@@ -12,6 +12,7 @@
       </ion-button>
     </ion-col>
     <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="miStringDeCancell" (ionInput)="onInput($event)"
+      placeholder="Buscar.."
       (ionCancel)="onCancel($event)">
     </ion-searchbar>
 
@@ -22,7 +23,7 @@
     </ion-col>
     <ion-button class="button2">
       Total (40)
-    </ion-button> 
+    </ion-button>
 
   </ion-row>
 </ion-content>

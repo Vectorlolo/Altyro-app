@@ -1,97 +1,106 @@
-<ion-header style="height: 30px; background-color: white;">
-  <ion-icon onclick="history.back()" style="margin-top: 17px;
+<ion-header>
+  <ion-icon onclick="history.back()"
+  style="margin-top: 17px;
   margin-left: 15px;
   color: #b111d4;
   font-size: 27px;" name="arrow-back-outline"></ion-icon>
- <!-- <ion-toolbar style="height: 40px;" >
-  <ion-title style="font-weight: bold; font-size: 20px;text-align: left;
-  margin-top: 10px;" >Informe</ion-title>
- </ion-toolbar> -->
- <ion-text style="color: black;">
-  <h1 style="text-align: left;margin: 30px;" class="tamano" >Informe</h1>
-</ion-text>
- <ion-text style="color: black;">
-  <h1 style="text-align: right;" class="text">Semana Actual</h1>
-  <h2  style="text-align: right;" class="text" ></h2>
-</ion-text>
 </ion-header>
 
 <ion-content>
 
-  <table style="margin-left: 7%;margin-top: 43%;" >
-    <tbody>
-      <tr>
-        <td  style="font-weight: bold; border-bottom: 6px solid #b111d4; font-size: 13px;" >Fecha</td>
-        <td style="font-weight: bold;margin-right: 6px; border-bottom: 6px solid #b111d4;font-size: 13px">Retiros</td>
-        <td style="font-weight: bold;margin-right: 6px; border-bottom: 6px solid #b111d4;font-size: 13px" >Entregas</td>
-        <td style="font-weight: bold;margin-right: 6px; border-bottom: 6px solid #b111d4;font-size: 13px">Provincia</td>
-          <td style="font-weight: bold;margin-right: 6px; border-bottom: 6px solid #b111d4;font-size: 13px">Total</td>
-      </tr>
-      <tr style="font-size: 13px;" >
-        <td>Lunes</td>
-        <td>3</td>
-        <td>30</td>
-        <td>12</td>
-        <td>$92.400</td>
-      </tr>
-      <tr  style="font-size: 13px;">
-        <td>Martes</td>
-        <td>0</td>
-        <td>3</td>
-        <td>3</td>
-        <td>$50.000</td>
-      </tr>
-      <tr  style="font-size: 13px;">
-        <td >Miércoles</td>
-        <td  >10</td>
-        <td>20</td>
-        <td>0</td>
-        <td>$45.800</td>
-      </tr>
-      <tr  style="font-size: 13px;">
-        <td >Jueves</td>
-        <td>7</td>
-        <td>49</td>
-        <td>5</td>
-        <td>$438.600</td>
-      </tr>
-      <tr  style="font-size: 13px;">
-        <td>Viernes</td>
-        <td>2</td>
-        <td>32</td>
-        <td>0</td>
-        <td>$70.200</td>
-      </tr>
-      <tr  style="font-size: 13px;">
-        <td >Sábado</td>
-        <td>4</td>
-        <td>28</td>
-        <td>0</td>
-        <td>$30.200</td>
-      </tr>
-    </tbody>
-  </table>
+  <h1 style="text-align: left;margin: 30px;" class="tamano" >Informe</h1>
 
+  <div style="color: white; text-align:right; margin-right:6%">
+    <u
+      class="text"
+    >Semana Actual</u>
+  </div>
 
-  <div class="textfle" >Semana Anterior</div>
+  <div style="text-align:center">
+    <table >
+      <tbody>
+        <tr>
+          <td  style="font-weight: bold; border-bottom: 6px solid #b111d4; font-size: 13px;" >Fecha</td>
+          <td style="font-weight: bold;margin-right: 6px; border-bottom: 6px solid #b111d4;font-size: 13px">Retiros</td>
+          <td style="font-weight: bold;margin-right: 6px; border-bottom: 6px solid #b111d4;font-size: 13px" >Entregas</td>
+          <td style="font-weight: bold;margin-right: 6px; border-bottom: 6px solid #b111d4;font-size: 13px">Provincia</td>
+            <td style="font-weight: bold;margin-right: 6px; border-bottom: 6px solid #b111d4;font-size: 13px">Total</td>
+        </tr>
+        <tr style="font-size: 13px;" >
+          <td>Lunes</td>
+          <td>3</td>
+          <td>30</td>
+          <td>12</td>
+          <td>$92.400</td>
+        </tr>
+        <tr  style="font-size: 13px;">
+          <td>Martes</td>
+          <td>0</td>
+          <td>3</td>
+          <td>3</td>
+          <td>$50.000</td>
+        </tr>
+        <tr  style="font-size: 13px;">
+          <td >Miércoles</td>
+          <td  >10</td>
+          <td>20</td>
+          <td>0</td>
+          <td>$45.800</td>
+        </tr>
+        <tr  style="font-size: 13px;">
+          <td >Jueves</td>
+          <td>7</td>
+          <td>49</td>
+          <td>5</td>
+          <td>$438.600</td>
+        </tr>
+        <tr  style="font-size: 13px;">
+          <td>Viernes</td>
+          <td>2</td>
+          <td>32</td>
+          <td>0</td>
+          <td>$70.200</td>
+        </tr>
+        <tr  style="font-size: 13px;">
+          <td >Sábado</td>
+          <td>4</td>
+          <td>28</td>
+          <td>0</td>
+          <td>$30.200</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-  <div class="textflee" >Semana Siguiente</div>
-  <ion-icon class="icon"  name="chevron-back-outline"></ion-icon>
-  <ion-icon class="icon" name="chevron-forward-outline"></ion-icon>
+  <ion-row style="margin-top:20px">
+    <ion-col size="6" style="text-align:center">
+      Semana Anterior
+    </ion-col>
+    <ion-col size="6" style="text-align:center">
+      Semana Siguiente
+    </ion-col>
+    <ion-col size="6" style="text-align:center">
+      <ion-icon  name="chevron-back-outline"></ion-icon>
+    </ion-col>
+    <ion-col size="6" style="text-align:center">
+      <ion-icon  name="chevron-forward-outline"></ion-icon>
+    </ion-col>
+  </ion-row>
 
- <div class="card">
-   <ion-col>
+<div style="text-align:center">
+  <div class="card">
+    <ion-col>
+      <p class="style" >TOTAL<br>
+       Semana</p>
+    </ion-col>
+    <ion-col>
      <p class="style" >TOTAL<br>
-      Semana</p>
-   </ion-col>
-   <ion-col>
-    <p class="style" >TOTAL<br>
-     Mes Actual</p>
-  </ion-col>
-  <ion-col>
-    <p class="style" >TOTAL<br>
-      Mes Anterior</p>
-  </ion-col>
+      Mes Actual</p>
+    </ion-col>
+    <ion-col>
+      <p class="style" >TOTAL<br>
+        Mes Anterior</p>
+    </ion-col>
   </div>
 
   <div class="card2">
@@ -100,12 +109,13 @@
     </ion-col>
     <ion-col>
       <p style="font-weight: bold;font-size: 13px;text-align: center;">$1.250.000 </p>
-   </ion-col>
-   <ion-col >
-    <p style="font-weight: bold;font-size: 13px;text-align: center;">
+    </ion-col>
+    <ion-col >
+      <p style="font-weight: bold;font-size: 13px;text-align: center;">
       $1.130.000
-    </p>
-   </ion-col>
+      </p>
+    </ion-col>
    </div>
+</div>
 
 </ion-content>
