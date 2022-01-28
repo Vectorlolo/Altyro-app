@@ -19,13 +19,13 @@
   <p>TIPO DE PAQUETE: {{entrega.tipopaquete}}</p>
   <p>TIPO DE SERVICIO: {{entrega.tiposervicio}}</p>
 
-  <div style="display: flex; text-align: center;">
-    <button mat-raised-button (click) ="openModal()"  style="background: red;" class="buttonRet" >
+  <div style="display: flex; text-align: center; margin-top:10px;">
+    <ion-button mat-raised-button (click) ="openModal()" color="danger" class="buttonRet" >
       NO ENTREGADO
-    </button>
-    <button mat-raised-button (click) ="openDialog()" style="background: green;" class="buttonRet" >
+    </ion-button>
+    <ion-button mat-raised-button (click) ="openDialog()" color="success" class="buttonRet" >
      ENTREGADO
-    </button>
+    </ion-button>
 
   </div>
 </div>

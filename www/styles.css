@@ -1238,5 +1238,11 @@ sub {
 .ion-align-items-baseline {
   align-items: baseline !important;
 }
+ion-header {
+  background-color: white;
+}
+ion-button {
+  color: white;
+}
 
 /*# sourceMappingURL=styles.css.map*/
